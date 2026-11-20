@@ -151,8 +151,9 @@ h2.reference-title{
 .card{
   box-shadow:0 6px 12px rgb(24 34 34 / 16%),0 18px 36px rgb(16 25 25 / 22%);
 }
-@media(max-width:680px){
+@media(max-width:820px){
   .hero{
+    height:auto;
     display:flex;
     flex-direction:column;
     align-items:stretch;
@@ -163,6 +164,7 @@ h2.reference-title{
   .hero .top{min-height:var(--mobile-header-height);padding-top:10px}
   .top nav{gap:clamp(12px,5vw,26px);font-size:.95rem}
   .top nav a{display:flex;align-items:center;min-height:44px}
+  .top nav a:last-child{display:none}
   .hero-image.hero-wide{
     position:relative;
     inset:auto;
@@ -204,7 +206,7 @@ h2.reference-title{
 @media(prefers-reduced-motion:no-preference) and (hover:hover){
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgb(12 20 20 / 38%)}
 }
-@media(max-width:680px){
+@media(max-width:900px){
   .wrap{width:calc(100% - 24px)}
   .top nav{font-size:1.3125rem;gap:clamp(12px,4vw,24px)}
   .top nav a{font-weight:500}
@@ -257,18 +259,26 @@ h2.reference-title{
   aspect-ratio:3/4;
   object-fit:contain;
 }
-@media(max-width:600px){
-  .catalog-rail{--rail-padding:9px;grid-auto-columns:100%;max-width:540px;margin-top:8px;padding-block:12px 18px}
+@media(max-width:820px){
+  .catalog-rail{--rail-padding:9px;grid-auto-columns:100%;max-width:600px;margin-top:8px;padding-block:12px 18px}
 }
 .hero .brand{display:inline-flex;align-items:center}
 .hero-copy p{max-width:34ch;text-wrap:pretty}
-@media(min-width:681px){
+@media(min-width:901px){
   .hero .top{padding-top:18px}
   .hero-copy{padding-top:92px}
   .hero-copy p{margin-top:18px}
 }
-@media(max-width:680px){
+@media(max-width:900px){
   .hero-copy p{max-width:29ch;margin-top:15px}
+}
+@media(min-width:901px){
+  .top nav{font-size:1.125rem}
+  .hero-copy p{font-size:1.25rem}
+  h2.reference-title{font-size:clamp(2.75rem,3.8vw,3.6rem)}
+  .offer h3,.card h3{font-size:1.5rem;line-height:1.25}
+  .offer p{font-size:1.0625rem}
+  #order .paper p,#order .paper address{font-size:1.2rem;line-height:1.4}
 }
 </style></head><body>
 <main><section class="hero"><img class="hero-image hero-wide" src="iva-hero-wide.webp" alt="" fetchpriority="high" width="1774" height="887"><header><div class="wrap top"><a class="brand" href="#top"><img src="data:image/png;base64,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" alt="IVA Flowers · Decor"></a><nav aria-label="Головне меню"><a href="#catalog">Каталог</a><a href="#contacts">Контакти</a><a href="tel:+380731821952">+38 073 182 19 52</a></nav></div></header>
