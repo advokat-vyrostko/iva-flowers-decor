@@ -205,25 +205,31 @@ h2.reference-title{
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgb(12 20 20 / 38%)}
 }
 @media(max-width:680px){
-  .top nav{font-size:1.1875rem}
+  .wrap{width:calc(100% - 24px)}
+  .top nav{font-size:1.3125rem;gap:clamp(12px,4vw,24px)}
   .top nav a{font-weight:500}
-  .hero-copy h1{font-size:clamp(2.625rem,10.5vw,4rem);font-weight:400}
-  .hero-copy p{font-size:1.25rem;line-height:1.5}
-  .offer .section-title,h2.reference-title{font-size:clamp(2.625rem,8.5vw,3.35rem)}
-  .offer h3,.card h3{font-size:1.5rem;font-weight:500;line-height:1.24}
-  .offer p{font-size:1.125rem;line-height:1.45}
-  .card h3{min-height:0;margin:15px 8px 6px}
+  .hero-copy{padding-block:20px 52px}
+  .hero-copy h1{font-size:clamp(2.75rem,11vw,4.15rem);font-weight:400}
+  .hero-copy p{font-size:1.375rem;line-height:1.44}
+  .offer{padding-block:30px 51px}
+  .offer-grid{margin-top:22px;gap:22px 12px}
+  .offer .section-title,h2.reference-title{font-size:clamp(2.875rem,8.5vw,3.6rem)}
+  .offer h3,.card h3{font-size:1.625rem;font-weight:500;line-height:1.2}
+  .offer p{font-size:1.25rem;line-height:1.4}
+  .catalog{padding-block:49px 54px}
+  .card h3{min-height:0;margin:12px 5px 4px}
   .card h3 a{padding-block:6px}
-  #order .feature{min-height:380px}
+  .details{padding-block:34px 38px}
+  #order .feature{min-height:350px;margin-top:18px}
   #order .paper{
-    width:min(90%,460px);
-    padding:14px 12px;
+    width:min(94%,490px);
+    padding:14px 11px;
     border-radius:4px;
     background:rgb(249 245 236 / 97%);
   }
-  #order .paper p,#order .paper address{font-size:1.25rem;line-height:1.45}
+  #order .paper p,#order .paper address{font-size:1.375rem;line-height:1.4}
   #order .paper address a{display:inline-block;font-weight:600}
-  .foot{font-size:1.1875rem}
+  .foot{font-size:1.25rem;padding-block:15px 20px}
 }
 .catalog-rail{
   --card-gap:clamp(14px,2.5vw,26px);
@@ -252,7 +258,7 @@ h2.reference-title{
   object-fit:contain;
 }
 @media(max-width:600px){
-  .catalog-rail{grid-auto-columns:100%;max-width:440px}
+  .catalog-rail{--rail-padding:9px;grid-auto-columns:100%;max-width:540px;margin-top:8px;padding-block:12px 18px}
 }
 .hero .brand{display:inline-flex;align-items:center}
 .hero-copy p{max-width:34ch;text-wrap:pretty}
